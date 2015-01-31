@@ -1,4 +1,4 @@
-## Logic
+ls## Logic
 
 Open your command prompt and `cd` into this README's directory (logic). In the src path is a file named `Logic.java`. Open it and fill in the portions of the code where the comments have indicated to do so.
 

@@ -1,3 +1,4 @@
+ls
 ## Binary Quiz!
 
 Open your command prompt and `cd` into this README's directory (binary).
