@@ -1,6 +1,6 @@
 package com.bloc.interfaces.people;
 
-public abstract class Person extends Object {
+public class Person extends Object {
 	// First name
 	private String mFirstName;
 	// Sur name
@@ -82,21 +82,38 @@ public abstract class Person extends Object {
 	 methods
 	 */
 
-	public abstract void getInCar();
+public void getInCar(){
+}
 
-	public abstract void startEngine();
+public  void startEngine(){
 
-	public abstract void driveFast();
+}
 
-	public abstract void getInPlane();
+public  void driveFast(){
 
-	public abstract void jumpFromPlane();
+}
 
-	public abstract void releaseParachute();
+public  void getInPlane(){
 
-	public abstract void putOnShoes();
+}
 
-	public abstract void findAPartner();
+public  void jumpFromPlane(){
 
-	public abstract void salsa();
+}
+
+public  void releaseParachute(){
+
+}
+
+public  void putOnShoes(){
+
+}
+
+public  void findAPartner(){
+
+}
+
+public  void salsa(){
+
+}
 }

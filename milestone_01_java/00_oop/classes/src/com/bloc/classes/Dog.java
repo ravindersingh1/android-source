@@ -1,3 +1,4 @@
+s
 package com.bloc.classes;
 
 class Dog {
