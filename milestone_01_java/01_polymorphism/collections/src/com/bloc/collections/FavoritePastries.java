@@ -24,7 +24,13 @@ public class FavoritePastries {
 	 * between rating and pastry
 	 */
 
+    
+    private HashMap<Pastry,int > pastries;
+    
+    
 	public FavoritePastries() {
+        pastries = new HashMap<>();
+        
 		// WORK HERE
 	}
 
@@ -42,7 +48,19 @@ public class FavoritePastries {
 	 * @return nothing
 	 */
 	public void addPastry(Pastry pastry, int rating) {
-		// WORK HERE
+		
+        if( pastries.containsKey(pastry)){
+            pastries.remove(pastry);
+            pastries.put(pastry, rating);
+        }
+           else{
+              pastries.put(pastry, rating);
+           }
+        
+        pastries.put(pastry, rating);
+        
+        
+        // WORK HERE
 	}
 
 	/*
@@ -57,7 +75,14 @@ public class FavoritePastries {
 	 */
 	public boolean removePastry(Pastry pastry) {
 		// WORK HERE
-		return false;
+        
+        if(	pastries.containsKey(pastry)){
+            pastries.remove(pastry);
+            return true;
+        }
+        else{
+            return false;
+        }
 	}
 
 	/*
@@ -74,7 +99,14 @@ public class FavoritePastries {
 	 */
 	public int getRatingForPastry(Pastry pastry) {
 		// WORK HERE
-		return -1;
+            
+            if(pastries.containsKey(pastry)){
+                
+                return pastries.get(pastry);
+            }
+            else{
+                 return -1;
+            }
 	}
 
 	/*
@@ -93,7 +125,56 @@ public class FavoritePastries {
 	 */
 	public Collection<Pastry> getPastriesForRating(int rating) {
 		// WORK HERE
-		return null;
-	}
-
+                    Set<Pastry> finalList = new Set<Pastry>();
+        Iterator itr = pastries.keySet().Iterator();
+        
+        While (itr.hasNext()){
+            Pastry pastry = itr.next();
+            if(rating == pastries.get(pastry)){
+                
+                finalList.add(pastry);
+            }
+        }
+        return finalList;
+        
+    }
+               
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
