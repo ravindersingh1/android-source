@@ -6,12 +6,18 @@ public class Main extends Object {
 
 	public static void main(String [] args) {
 
-		Dog dog = new Dog();
+        Pet dog = (Dog) new Dog();
+        Pet cat = (Cat) new Cat();
+        Pet bird = (Bird) new Bird();
+        Pet snake = (Snake)new Snake();
+        Pet tarantula = (Tarantula) new Tarantula();
+        
+        /*Dog dog = new Dog();
 		Cat cat = new Cat();
 		Bird bird = new Bird();
 		Snake snake = new Snake();
 		Tarantula tarantula = new Tarantula();
-
+  */
 		// Accomplish the below using polymorphism
 
 		dog.feed();
