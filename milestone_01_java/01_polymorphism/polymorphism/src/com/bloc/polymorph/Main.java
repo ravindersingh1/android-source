@@ -12,15 +12,30 @@ public class Main extends Object {
         Pet snake = (Snake)new Snake();
         Pet tarantula = (Tarantula) new Tarantula();
         
+        
+        Pet[] pets= { dog, cat, bird, snake, tarantula};
+        
+       
+        for (int i = 0; i < pets.length; i++) {
+            
+            pets[i].feed();
+            pets[i].wash();
+            pets[i].exercise();
+        }
+        
+        
+        
+        
+        
         /*Dog dog = new Dog();
 		Cat cat = new Cat();
 		Bird bird = new Bird();
 		Snake snake = new Snake();
 		Tarantula tarantula = new Tarantula();
-  */
+  
 		// Accomplish the below using polymorphism
 
-		dog.feed();
+		/* dog.feed();
 		dog.wash();
 		dog.exercise();
 
@@ -39,7 +54,7 @@ public class Main extends Object {
 		tarantula.feed();
 		tarantula.wash();
 		tarantula.exercise();
-
+  */
 		// Accomplish the above using polymorphism
 
 		assert dog.isFed() && dog.isWashed() && dog.isExercised() : "Your dog needs a little more attention";
