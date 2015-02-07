@@ -1,6 +1,7 @@
 package com.bloc.collections;
 
 import java.util.*;
+import java.util.Iterator;
 
 /*
  * FavoritePastries
@@ -25,7 +26,7 @@ public class FavoritePastries {
 	 */
 
     
-    private HashMap<Pastry,int > pastries;
+    private HashMap<Pastry,Integer> pastries;
     
     
 	public FavoritePastries() {
@@ -125,19 +126,27 @@ public class FavoritePastries {
 	 */
 	public Collection<Pastry> getPastriesForRating(int rating) {
 		// WORK HERE
-                    Set<Pastry> finalList = new Set<Pastry>();
-        Iterator itr = pastries.keySet().Iterator();
         
-        While (itr.hasNext()){
-            Pastry pastry = itr.next();
-            if(rating == pastries.get(pastry)){
-                
-                finalList.add(pastry);
-            }
+        ArrayList<Pastry> finalList = new ArrayList<Pastry>();
+        
+        if(rating <1 || rating >5){
+            return finalList;
         }
-        return finalList;
+        else{
         
-    }
+             Iterator<Pastry> itr = pastries.keySet().iterator();
+             while (itr.hasNext()){
+             Pastry pastry = itr.next();
+                 
+                 if(rating == pastries.get(pastry)){
+                  finalList.add(pastry);
+                  }
+              }
+             return finalList;
+          }
+   
+     }
+    
                
 }
 
